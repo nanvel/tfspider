@@ -1,0 +1,4 @@
+tfspider/local_settings.py
+*.pyc
+.env
+.idea
