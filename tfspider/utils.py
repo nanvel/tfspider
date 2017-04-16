@@ -16,7 +16,7 @@ client = session.create_client('s3', region_name=settings['S3_REGION'])
 def load_members():
     try:
         response = client.get_object(Bucket=settings['S3_BUCKET'], Key=settings['S3_KEY'])
-        members = json.loads(response['Body'].read()).get('members', {})
+        members = json.loads(response['Body'].read())
     except ClientError:
         members = {}
 
