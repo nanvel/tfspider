@@ -83,7 +83,7 @@ class TfSpider(Spider):
         js = js.split(' };')[0]
         columns = (
             'avatar', 'username', 'la', 'chatid', 'userid', 'age', 'city',
-            'offline', 'onlinechat', 'newmember'
+            'offline', 'onlinechat', 'newmember', 'birthday'
         )
         for key in columns:
             js = js.replace('{}:'.format(key), '"{}":'.format(key))
